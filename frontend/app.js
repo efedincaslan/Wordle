@@ -3,7 +3,11 @@ console.log("✅ app.js loaded");
 // ===== CONFIG =====
 const ROWS = 6;
 const COLS = 5;
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "http://127.0.0.1:8000"
+    : "https://wordle-nbni.onrender.com";
+
 
 // ===== KEYBOARD =====
 const KEY_ROWS = [
